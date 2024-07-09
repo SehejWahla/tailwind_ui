@@ -1,23 +1,45 @@
-export default function App() {
+import { Nav } from "./components";
+import {
+  CustomerReviews,
+  Footer,
+  Hero,
+  PopularProducts,
+  Services,
+  SpecialOffer,
+  Subscribe,
+  SuperQuality,
+} from "./sections";
+
+const App = () => {
   return (
-    <main>
-      Nav
-      <section className="flex w-full px-10 py-10">
-        Section 1
+    <main className='relative'>
+      <Nav />
+      <section className='xl:padding-l wide:padding-r padding-b'>
+        <Hero />
       </section>
-      <section className="flex w-full px-10 py-10">
-        Section 2
+      <section className='padding'>
+        <PopularProducts />
       </section>
-      <section className="flex w-full px-10 py-10">
-        Section 3
+      <section className='padding'>
+        <SuperQuality />
       </section>
-      <section className="flex w-full px-10 py-10 bg-pale-blue">
-        Section 4
+      <section className='padding-x py-10'>
+        <Services />
       </section>
-      <section className="flex w-full px-10 py-10">
-        Section 5
+      <section className='padding'>
+        <SpecialOffer />
       </section>
-    
+      <section className='bg-pale-blue padding'>
+        <CustomerReviews />
+      </section>
+      <section className='padding-x sm:py-32 py-16 w-full'>
+        <Subscribe />
+      </section>
+      <section className=' bg-black padding-x padding-t pb-8'>
+        <Footer />
+      </section>
     </main>
-  )
-}
+  );
+};
+
+export default App;
